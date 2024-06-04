@@ -3,7 +3,7 @@
 #
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (LeetCodeHot100 "main.cpp" "LeetCodeHot100_049.h" "LeetCodeHot100_062.h" "LeetCodeHot100_128.h" "LeetCodeHot100_283.h" "LeetCodeHot100_011.h" "LeetCodeHot100_015.h" "LeetCodeHot100_042.h" "LeetCodeHot100_003.h")
+add_executable (LeetCodeHot100 "main.cpp" "LeetCodeHot100_049.h" "LeetCodeHot100_062.h" "LeetCodeHot100_128.h" "LeetCodeHot100_283.h" "LeetCodeHot100_011.h" "LeetCodeHot100_015.h" "LeetCodeHot100_042.h" "LeetCodeHot100_003.h" "LeetCodeHot100_438.h" "LeetCodeHot100_438.cpp" "LeetCodeHot100_560.h" "LeetCodeHot100_560.cpp" "LeetCodeHot100_001.h" "LeetCodeHot100_001.cpp" "LeetCodeHot100_239.h" "LeetCodeHot100_239.cpp")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET LeetCodeHot100 PROPERTY CXX_STANDARD 20)
