@@ -1,10 +1,10 @@
 ﻿// LeetCodeHot100.cpp: 定义应用程序的入口点。
 //
 
-#include "LeetCodeHot100_041.h"
+#include "LeetCodeHot100_142.h"
 
 int main()
 {
-	Solution041 sol;
+	Solution142 sol;
 	sol.test();
 }
