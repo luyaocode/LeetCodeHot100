@@ -20,13 +20,15 @@ ListNode* Solution002::addTwoNumbers(ListNode* l1, ListNode* l2)
 	//};
 	//auto p=reverse(l1);
 	//auto q=reverse(l2);
+	auto p = l1;
+	auto q = l2;
 	int flag = 0;
 	ListNode* newNode = NULL;
 	ListNode* prev = NULL;
 	ListNode* head = NULL;
 	while (p != NULL && q != NULL)
 	{
-		auto val = p->val + q->val+flag % 10;
+		auto val = (p->val + q->val+flag) % 10;
 		flag = (p->val + q->val+ flag) / 10 >= 1 ? 1 : 0;
 		newNode = new ListNode(val);
 		if (head == NULL)
@@ -87,7 +89,8 @@ ListNode* Solution002::addTwoNumbers(ListNode* l1, ListNode* l2)
 			prev->next = newNode;
 		}
 	}
-	return reverse(head);
+	//return reverse(head);
+	return head;
 }
 
 void Solution002::test()
