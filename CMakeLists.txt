@@ -4,6 +4,8 @@
 cmake_minimum_required (VERSION 3.8)
 
 project ("LeetCodeHot100")
+project ("Other")
 
 # 包含子项目。
 add_subdirectory ("LeetCodeHot100")
+add_subdirectory ("Other")
