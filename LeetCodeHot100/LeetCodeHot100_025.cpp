@@ -5,6 +5,9 @@ using std::endl;
 
 ListNode* Solution025::reverseKGroup(ListNode* head, int k)
 {
+	/**
+	* 反转链表匿名函数
+	*/
 	auto reverse = [](ListNode*& p, ListNode*& prev, ListNode*& prevHead,int k)
 	{
 		ListNode* newHead = p;
