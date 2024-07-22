@@ -1,18 +1,28 @@
 ﻿// LeetCodeHot100.cpp: 定义应用程序的入口点。
 //
 
-#include "LeetCodeHot100_148.h"
+#include "LeetCodeHot100_023.h"
+#include <vector>
+using std::vector;
 
 int main()
 {
-	Solution148 sol;
-	ListNode n1(-1);
-	ListNode n2(5);
-	ListNode n3(3);
-	ListNode n4(4);
-	ListNode n5(0);
-	n1.next = &n2; n2.next = &n3; n3.next = &n4; n4.next = &n5;
-	sol.sortList(&n1);
+	Solution023 sol;
+	vector<ListNode*> lists;
+	ListNode n11(1);
+	lists.push_back(&n11);
 
+	ListNode n21(0);
+	ListNode n22(3);
+	ListNode n23(4);
+	n21.next = &n22;
+	lists.push_back(&n21);
+
+	ListNode n31(2);
+	ListNode n32(6);
+	n31.next = &n32;
+	lists.push_back(&n31);
+
+	sol.mergeKLists(lists);
 	return 0;
 }
