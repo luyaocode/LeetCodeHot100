@@ -3,14 +3,15 @@
 using std::max;
 int Solution104::maxDepth(TreeNode* root)
 {
-		if (root != nullptr)
-		{
-			inorder(root,0);
-		}
-		return _maxDepth;
+	if (root != nullptr)
+	{
+		int currLevel = 0;
+		inorder(root, currLevel);
+	}
+	return _maxDepth;
 }
 
-void Solution104::inorder(TreeNode* node,int level)
+void Solution104::inorder(TreeNode* node,int& level)
 {
 	level++;
 	_maxDepth = max(level,_maxDepth);

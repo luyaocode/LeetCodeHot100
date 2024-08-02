@@ -4,27 +4,21 @@ using std::stack;
 
 TreeNode* Solution226::invertTree(TreeNode* root)
 {
-	if (root != nullptr)
+	if (root == nullptr)
 	{
-		stack<TreeNode*> stack;
-		invert(root, stack);
+		return root;
 	}
-	return root;
-}
-
-void invert(TreeNode* node,stack<TreeNode*>& stack)
-{
-	stack.push(node);
+	stack<TreeNode*> stack;
+	stack.push(root);
 	while (!stack.empty())
 	{
 		// 交换左右孩子
-		auto top = stack.top();
-		TreeNode* temp = top->left;
-		top->left = top->right;
-		top->right = temp;
+		auto node = stack.top();
+		TreeNode* temp = node->left;
+		node->left = node->right;
+		node->right = temp;
 		// 自身出栈
 		stack.pop();
-
 		// 左右孩子入栈
 		if (node->left != nullptr)
 		{
@@ -35,5 +29,5 @@ void invert(TreeNode* node,stack<TreeNode*>& stack)
 			stack.push(node->right);
 		}
 	}
-
+	return root;
 }
