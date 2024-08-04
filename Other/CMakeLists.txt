@@ -3,7 +3,7 @@
 #
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (Other "main.cpp" "multithread_loop_print_ABC.h" "multithread_loop_print_ABC.cpp" "tencent_print_sum.h" "tencent_print_sum.cpp")
+add_executable (Other "main.cpp" "multithread_loop_print_ABC.h" "multithread_loop_print_ABC.cpp" "tencent_print_sum.h" "tencent_print_sum.cpp" "swap_two_make_max_multi.cpp")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET LeetCodeHot100 PROPERTY CXX_STANDARD 20)
