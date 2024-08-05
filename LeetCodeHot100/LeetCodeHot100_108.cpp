@@ -2,26 +2,18 @@
 
 TreeNode* Solution108::sortedArrayToBST(vector<int>& nums)
 {
-	if (nums.size() == 0) return nullptr;
-	auto size = nums.size();
-	TreeNode* root = new TreeNode(nums[size/2]);
-	root->left = leftChild(nums,size/2,root);
-	root->right = rightChild(nums,size/2,root);
+	return createNode(nums,0,nums.size()-1);
+}
+
+TreeNode* Solution108::createNode(vector<int>& nums, int left,int right)
+{
+	if (left > right)
+	{
+		return nullptr;
+	}
+	auto mid = (right + left) / 2;
+	auto root = new TreeNode(nums[mid]);
+	root->left = createNode(nums,left,mid-1);
+	root->right = createNode(nums,mid+1,right);
 	return root;
-}
-
-TreeNode* Solution108::leftChild(vector<int>& nums, int idx,TreeNode* node)
-{
-	if (idx == 0) return nullptr;
-	auto child=leftChild(nums, (idx - 1) / 2, node);
-	node->left = child;
-	return child;
-}
-
-TreeNode* Solution108::rightChild(vector<int>& nums, int idx, TreeNode* node)
-{
-	if (idx == 0) return nullptr;
-	auto child= rightChild(nums, (nums.size() + idx) / 2, node);
-	node->right = child;
-	return child;
 }
